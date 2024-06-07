@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/252/252035.png">
+    <title>Weather Forecast</title>
+    <meta name="viewport" content="width=device-width" initial-scale=1>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="/css/mystyle.css">
+</head>
+<body>
+    <div class="cont">
+        <div class="form sign-in">
+            <form action="/signinsubmit" method="GET">
+            <h2 style="color: rgb(106, 0, 255);font-family: initial;">Weather Forecast</h2>
+            <label>
+                <span>Email</span>
+                <input type="email" name="email" />
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" name="pwd" />
+            </label>
+            <button type="submit" class="submit">Sign In</button>
+         </form>
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+                 
+                    <h3>Don't have an account? Please Sign up!<h3>
+                </div>
+                <div class="img__text m--in">
+                
+                    <h3>If you already have an account, just sign in.<h3>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up" style="color: #0088ff;">Sign Up</span>
+                    <span class="m--in" style="color: #0088ff;">Sign In</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <form action="/signupsubmit" method="GET">
+                <h2  style="color: darkblue;font-family: initial;" >Create your Account to login!!!</h2>
+                <label>
+                    <span>Name</span>
+                    <input type="text" name="name" required />
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email"required />
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" name="pwd" required/>
+                </label>
+                <button type="submit" class="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.img__btn').addEventListener('click', function() {
+            document.querySelector('.cont').classList.toggle('s--signup');
+        });
+    </script>
+</body>
+</html>
